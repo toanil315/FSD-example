@@ -1,0 +1,73 @@
+{
+  "intro": "is a place to write, read, and connect",
+  "description": "It's easy and free to Blog your any thinking on any topic and connect with millions of readers",
+  "about": "About",
+  "contact": "Contact",
+  "follow": "Follow",
+  "signIn": "Sign in",
+  "getStarted": "Create Blog",
+  "postBy": "Blog is posted by",
+  "publishAt": "Publish at",
+  "createBlog": "Create Blog",
+  "editBlog": "Edit Blog",
+  "form": {
+    "blog": {
+      "title": "Title",
+      "titlePlaceholder": "Enter title",
+      "content": "Description",
+      "contentPlaceholder": "Enter description",
+      "body": "Body",
+      "bodyPlaceholder": "Enter body",
+      "image": "Banner Image",
+      "imagePlaceholder": "Enter blog banner",
+      "publish": "Publish",
+      "createSuccess": "Blog is created successfully.",
+      "updateSuccess": "Blog is updated successfully.",
+      "fail": "Something went wrong, please try again!"
+    },
+    "validation": {
+      "required": "This field is required!"
+    }
+  },
+  "viewBlogNow": "View Blog Now",
+  "close": "Close",
+  "search": "Search...",
+  "sortOrder": {
+    "asc": "Oldest",
+    "desc": "Newest"
+  },
+  "searchFor": "Search results for",
+  "components": {
+    "uploader": {
+      "chooseFile": "Choose files",
+      "browserFile": "Browse files",
+      "dropFile": "Drop your files here, or "
+    },
+    "table": {
+      "resultPerPage": "Results per page"
+    }
+  },
+  "validateErrors": {
+    "required": "This field is required"
+  },
+  "commons": {
+    "add": "Add New",
+    "edit": "Edit",
+    "editTitle": "Edit",
+    "delete": "Delete",
+    "exportExcel": "Export Excel",
+    "status": "Status",
+    "search": "Search",
+    "cancel": "Cancel",
+    "save": "save",
+    "active": "Active",
+    "inactive": "Inactive",
+    "backToHome": "Back to home"
+  },
+  "notFound": {
+    "title": "Oh no! Error! An error occurred. Please try again later.",
+    "desc": "We couldn't find the URL you just visited on our server. That's all we know.",
+    "dataNotAvailable": "Data is not available",
+    "tryAgain": "Try adjusting your search keywords or changing options in Filters (if any) to achieve your desired results!"
+  }
+}
