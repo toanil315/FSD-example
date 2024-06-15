@@ -1,4 +1,4 @@
 export enum SORT_ORDER_ENUM {
-  ASC = 'asc',
-  DESC = 'desc',
+  ASC = 'ascend',
+  DESC = 'descend',
 }

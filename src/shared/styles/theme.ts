@@ -1,5 +1,3 @@
-import { Theme } from '@emotion/react';
-
 const colors = {
   // primary
   primary_1: '#E6EEF5',
@@ -165,4 +163,4 @@ export const theme = {
   zIndices,
   shadows,
   radii,
-} as Theme;
+};

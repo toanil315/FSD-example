@@ -1,5 +1,5 @@
 import { reactQueryClient } from '@/shared/libs/reactQueryClient';
-import { ThemeProvider } from '@emotion/react';
+import { Theme, ThemeProvider } from '@emotion/react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ConfigProvider } from 'antd';
 import { I18nextProvider } from 'react-i18next';
@@ -17,7 +17,7 @@ export const Providers = ({ children }: ProvidersProps) => {
   return (
     <QueryClientProvider client={reactQueryClient}>
       <I18nextProvider i18n={i18n}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme as Theme}>
           <ConfigProvider theme={antdTheme}>
             <BrowserRouter>
               <NotificationProvider>{children}</NotificationProvider>
