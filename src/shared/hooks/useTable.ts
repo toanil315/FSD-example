@@ -1,8 +1,9 @@
 import { usePagination } from './usePagination';
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { TableProps } from 'antd';
+import { TablePaginationConfig } from 'antd';
 import { SORT_ORDER_ENUM } from '../constants';
+import { FilterValue, SorterResult } from 'antd/es/table/interface';
 
 export interface PaginationParams {
   page: number;
@@ -37,9 +38,11 @@ export const useTable = ({
   const filter = useFilterTable(defaultFilter);
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const onChange: TableProps['onChange'] = (paginationValue, filterValue, sortValue) => {
-    console.log(paginationValue);
-
+  const onChange = (
+    paginationValue?: TablePaginationConfig,
+    filterValue?: Record<string, FilterValue | null>,
+    sortValue?: SorterResult<any> | SorterResult<any>[],
+  ) => {
     pagination.onPageChange(
       paginationValue?.current || pagination.currentPage,
       paginationValue?.pageSize || pagination.limit,

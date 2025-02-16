@@ -16,7 +16,7 @@ const Table = ({ tableInstance, totalElements, ...restProps }: Props) => {
   const { pagination, filter, sort } = tableInstance;
 
   const handleChange: TableProps['onChange'] = (paginationValue, filterValue, sortValue) => {
-    tableInstance.onChange(paginationValue, filterValue, sortValue, restProps.dataSource as any);
+    tableInstance.onChange(paginationValue, filterValue, sortValue);
   };
 
   const customColumns = useMemo(() => {

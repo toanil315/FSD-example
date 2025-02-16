@@ -78,6 +78,14 @@ const TableExample = () => {
       }),
   });
 
+  const handleSearch = (v: string) => {
+    setSearch(v as string);
+    tableInstance.onChange({
+      current: 1,
+      pageSize: tableInstance.pagination.limit,
+    });
+  };
+
   return (
     <div className='w-[1000px] mx-auto mt-4'>
       <div className='my-4'>
@@ -85,7 +93,7 @@ const TableExample = () => {
           placeholder='Enter some name...'
           suffix={<SearchIcon />}
           value={search}
-          onChange={(v) => setSearch(v as string)}
+          onChange={(v) => handleSearch(v as string)}
         />
       </div>
       <Table
