@@ -38,6 +38,8 @@ export const useTable = ({
   const [searchParams, setSearchParams] = useSearchParams();
 
   const onChange: TableProps['onChange'] = (paginationValue, filterValue, sortValue) => {
+    console.log(paginationValue);
+
     pagination.onPageChange(
       paginationValue?.current || pagination.currentPage,
       paginationValue?.pageSize || pagination.limit,
@@ -89,8 +91,12 @@ const useFilterTable = (initialFilter?: FilterParams) => {
         searchParams.append('filter', `${field}${filterParamsSeparator}${values.join(',')}`);
       }
     });
-    searchParams.delete('page');
-    searchParams.append('page', '1');
+
+    if (isFilterDifferent(filteredInfo, filterParams)) {
+      searchParams.delete('page');
+      searchParams.append('page', '1');
+    }
+
     setFilteredInfo(filterParams);
     return searchParams;
   };
@@ -139,4 +145,10 @@ const getInitialFilter = (defaultFilter?: FilterParams): Partial<FilterParams> =
   }
 
   return {};
+};
+
+const isFilterDifferent = (oldFilter: Partial<FilterParams>, newFilter: FilterParams) => {
+  const oldValues = Object.values(oldFilter).filter(Boolean);
+  const newValues = Object.values(newFilter).filter(Boolean);
+  return JSON.stringify(oldValues) !== JSON.stringify(newValues);
 };

@@ -57,10 +57,12 @@ const Table = ({ tableInstance, totalElements, ...restProps }: Props) => {
         onChange={handleChange}
         columns={customColumns}
         locale={locale}
+        {...restProps}
         pagination={{
           pageSize: pagination.limit,
+          current: pagination.currentPage,
+          total: totalElements,
         }}
-        {...restProps}
       />
       <Pagination
         {...restProps.pagination}

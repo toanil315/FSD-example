@@ -1,4 +1,5 @@
 import { blogHandlers } from '@/entities/blog/mocks/handlers';
+import { usersHandlers } from '@/entities/user/mocks/handlers';
 import { setupWorker } from 'msw/browser';
 
 /*
@@ -6,4 +7,4 @@ import { setupWorker } from 'msw/browser';
     this lib will use service worker to intercept the requests out going from the app
     and return the mocked data
 */
-export const worker = setupWorker(...blogHandlers);
+export const worker = setupWorker(...blogHandlers, ...usersHandlers);

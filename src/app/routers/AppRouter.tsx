@@ -7,6 +7,7 @@ const Home = loadable(() => import('@/pages/home'));
 const BlogDetail = loadable(() => import('@/pages/blog-detail'));
 const CreateBlog = loadable(() => import('@/pages/create-blog'));
 const UpdateBlog = loadable(() => import('@/pages/update-blog'));
+const TableExample = loadable(() => import('@/pages/table-example'));
 
 const routeList: RouteObject[] = [
   {
@@ -28,6 +29,10 @@ const routeList: RouteObject[] = [
       {
         path: ROUTES.CREATE_BLOG,
         element: <CreateBlog />,
+      },
+      {
+        path: 'table-example',
+        element: <TableExample />,
       },
     ],
   },
